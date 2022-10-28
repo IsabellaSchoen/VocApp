@@ -1,42 +1,55 @@
 <template>
-  <div>
-    <div v-for="navbar in navbars" :key="navbar.id">
-      <router-link :to="navbar.router">{{ navbar.names }}</router-link>
-    </div>
-    <router-view />
-  </div>
+  <nav class="navigation-bar">
+    <div class="home-class">
+          <router-link to="/">
+            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+          </router-link>
+      </div>
+      <div class="settings-class">
+        <router-link to="/settings">
+          <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+        </router-link>
+      </div>
+  </nav>
+  <router-view />
 </template>
-
-<script>
-export default {
-  name: "App",
-  data: function () {
-    return {
-      navbars: [
-      { names: "Home", router:"/" },
-      { names: "Einstellungen", router:"/einstellungen"}
-      ]
-    }
-  }
-};
-</script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Meridien', sans-serif;
   text-align: center;
-  color: #2c3e50;
+  background-image: url('./assets/background_pic_one.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-nav {
-  padding: 30px;
+.navigation-bar {
+  display: grid;
+  gap: 400px;
+  padding: 0px;
+  background-color: rgba(189, 189, 189, 0.815);
+  grid-template-columns: auto auto;
 }
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+
+.home-class {
+  padding: 20px 0;
+  font-size: 20px;
 }
-nav a.router-link-exact-active {
-  color: #42b983;
+
+.home-class > a {
+  text-decoration: none;
+  color: black;
+}
+
+.settings-class {
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.settings-class > a {
+  text-decoration: none;
+  color: black;
 }
 </style>
+
+#LJUoCTHII%#wA&G
