@@ -8,13 +8,49 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/einstellungen",
-    name: "einstellungen",
+    path: "/settings",
+    name: "settings",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/SettingView.vue"),
+  },
+  {
+    path: "/",
+    name: "sprache",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/HomeView.vue"),
+  },
+  {
+    path: "/profil",
+    name: "profil",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/ProfilView.vue"),
+  },
+  {
+    path: "/feedback",
+    name: "feedback",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/FeedbackView.vue"),
+  },
+  {
+    path: "/abmelden",
+    name: "abmelden",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/AbmeldenView.vue"),
   },
 ];
 
